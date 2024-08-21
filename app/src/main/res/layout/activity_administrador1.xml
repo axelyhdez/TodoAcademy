@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".administrador1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/develop"
+            android:layout_marginLeft="80sp"
+            android:layout_marginRight="80sp"
+            android:layout_marginBottom="-50sp"
+            android:layout_marginTop="-50sp"
+            app:tint="@color/blue1"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Administrador"
+        android:layout_marginTop="-15sp"
+        android:fontFamily="@font/roboto"
+        android:textSize="30sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="?attr/materialCardViewElevatedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12sp"
+        app:cardBackgroundColor="@color/blue4"
+        android:layout_marginTop="15sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Administrar cursos"
+            android:textSize="20sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="15sp"
+            android:textColor="@color/white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--Agregar cursos-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar cursos"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15sp"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/agregarCurso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Categoria"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15sp"
+                    android:textColor="@color/white"
+                    />
+                <Spinner
+                    android:id="@+id/categoriaSpin"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:layout_marginBottom="20sp"
+                    android:layout_marginLeft="10sp"
+                    />
+            </LinearLayout>
+            <!--Ver cursos-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver cursos"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15sp"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/verCurso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingLeft="10sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del curso"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15sp"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:id="@+id/nombreCurso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre del curso"
+                    android:background="@drawable/edit_text_border"
+                    android:textSize="15sp"
+                    android:padding="4sp"
+                    android:textColorHint="#adb5bd"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginVertical="15sp"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <!--Ver cursos-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eliminar cursos"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15sp"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/eliminarCurso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Eliminar"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Administrar usuarios"
+            android:textSize="20sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="15sp"
+            android:textColor="@color/white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--Administrar Usuarios-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10sp"
+                android:paddingBottom="15sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver usuarios"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15sp"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/verUsuarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ver"/>
+            </LinearLayout>
+            <!--Ver cursos-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editar usuarios"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15sp"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/editarU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Editar Usuarios"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

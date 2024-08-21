@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Datos">
+    <!--Formulario para actualizar datos de contacto y escolares -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/develop"
+                    android:layout_marginLeft="80sp"
+                    android:layout_marginRight="80sp"
+                    android:layout_marginBottom="-50sp"
+                    android:layout_marginTop="-50sp"
+                    app:tint="@color/blue1"
+                    />
+            </LinearLayout>
+
+            <!--Datos de contacto-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="40sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa tus datos"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/roboto"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Datos de contacto"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="15sp"
+                    android:layout_marginTop="25sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etNombre1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre(s)"
+                    android:background="@drawable/edit_text_border"
+                    android:textSize="20sp"
+                    android:padding="15sp"
+                    android:textColorHint="#adb5bd"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginBottom="15sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/etApellido1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Primer apellido"
+                    android:background="@drawable/edit_text_border"
+                    android:textSize="20sp"
+                    android:padding="15sp"
+                    android:textColorHint="#adb5bd"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginVertical="10sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/etApellidoP1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Segundo Apellido"
+                    android:background="@drawable/edit_text_border"
+                    android:textSize="20sp"
+                    android:padding="15sp"
+                    android:textColorHint="#adb5bd"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginVertical="10sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/etTelefono1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Número de telefono"
+                    android:background="@drawable/edit_text_border"
+                    android:textSize="20sp"
+                    android:padding="15sp"
+                    android:textColorHint="#adb5bd"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginVertical="10sp"
+                    android:textColor="@color/black"
+                    />
+                <!--Datos escolares-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Datos escolares"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15sp"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/etEscuela1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Colegio o Institucion"
+                    android:background="@drawable/edit_text_border"
+                    android:textSize="20sp"
+                    android:padding="15sp"
+                    android:textColorHint="#adb5bd"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginBottom="15sp"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Inicio y fin de residencias"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnFechaInicio1"
+                        style="@style/Widget.App.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="5sp"
+                        android:layout_weight="1"
+                        android:text="Inicio"
+                        android:textSize="18sp"
+                        app:icon="@drawable/calendar" />
+
+                    <Button
+                        android:id="@+id/btnFechaFin1"
+                        style="@style/Widget.App.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fin"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        app:icon="@drawable/calendar"
+                        android:layout_marginHorizontal="5sp"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSigD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Siguiente"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:paddingHorizontal="50sp"
+                    android:paddingVertical="1sp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

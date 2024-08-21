@@ -1,55 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".Chat">
-
-    <LinearLayout
-        android:id="@+id/ll_layout_bar"
+    <!--Fragment para recibir los pagos-->
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/blue1"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:text="Pagos"
+        android:layout_marginTop="20sp"
+        android:textSize="30sp"/>
 
-        <EditText
-            android:id="@+id/et_message"
-            android:inputType="textShortMessage"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight=".5"
-            android:background="@drawable/edit_text_border"
-            android:backgroundTint="@android:color/white"
-            android:hint="Type a message..."
-            android:padding="10dp"
-            android:singleLine="true" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_send"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="Send"
-            android:backgroundTint="@color/blue3"
-            android:textColor="@android:color/white" />
+            <!--Info de activity-->
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue4"
+                android:paddingTop="15sp">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:padding="10sp"
+                    android:layout_marginHorizontal="8sp"
+                    android:textColor="@color/white"
+                    android:text="Aquí podrás subir las fotografías de los pagos a realizar :)"
+                />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_messages"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/ll_layout_bar"
-        android:layout_below="@+id/dark_divider"
-        tools:itemCount="20"
-        tools:listitem="@layout/message_item" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#42A5F5"
-        android:id="@+id/dark_divider"/>
+            </com.google.android.material.card.MaterialCardView>
 
-</RelativeLayout>
+            <!--Botones-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingTop="15sp">
+
+                <Button
+                    android:id="@+id/buttonSeleccionar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccionar fotografía"
+                    android:layout_marginRight="8sp"
+                    android:paddingVertical="14sp"/>
+                <Button
+                    android:id="@+id/ultimaFoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver última fotografía "
+                    android:paddingVertical="14sp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/fotoSubida"
+                android:layout_width="400dp"
+                android:layout_height="450dp"
+                tools:srcCompat="@tools:sample/avatars"
+                android:layout_gravity="center"
+                android:layout_marginVertical="15sp"/>
+
+            <!--Confirmación de pago-->
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue4"
+            >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="10sp"
+                        android:layout_marginHorizontal="8sp"
+                        android:textColor="@color/white"
+                        android:text="Pago validado: "
+                    />
+
+                    <TextView
+                        android:id="@+id/Confirmacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="10sp"
+                        android:layout_marginHorizontal="8sp"
+                        android:textColor="@color/white"
+                        android:text="Sin confirmar"
+                    />
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="16sp"
+
+                            android:layout_marginHorizontal="8sp"
+                            android:textColor="@color/white"
+                            android:text="Cuando tu pago sea aceptado cambiará el estado de la aplicación, además de que tu asesor te confirmará"
+                        />
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:layout_marginHorizontal="8sp"
+                            android:layout_marginVertical="10sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Si tu pago es correcto, porfavor NO subas otra fotografía o tu pago podría perderse"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="\n\n\n\n"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>

@@ -11,8 +11,13 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
         <!-- Customize your theme here. -->
         <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:windowBackground">@color/dia</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        
 
     </style>
 
@@ -40,6 +45,12 @@
     <style name="ThemeOverlay.App.Button" parent="ThemeOverlay.Material3.Button">
         <item name="colorPrimary">@color/blue2</item>
         <item name="colorOnPrimary">@color/blue1</item>
+    </style>
+
+    <!--Estilo foto perfil-->
+    <style name="roundedImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 
 

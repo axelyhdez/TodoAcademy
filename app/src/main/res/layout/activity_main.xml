@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <!--Main Activity-->
+    <!--Aquí se cargan los fragments de user, pagos y home-->
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
 
+    <!--Menú de navegación-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -19,5 +21,6 @@
         app:menu="@menu/bottom_navigation_menu"
         android:layout_alignParentBottom="true"
         />
+
 
 </RelativeLayout>

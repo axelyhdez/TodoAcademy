@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main_item"
+        android:title="Administrador">
+        <menu>
+            <item
+                android:id="@+id/perfil"
+                android:icon="@drawable/user"
+                android:title="Perfil"
+                android:checkable="true"/>
+            <item
+                android:id="@+id/registrar"
+                android:icon="@drawable/user"
+                android:title="Registrar"
+                android:checkable="true"/>
+
+        </menu>
+    </item>
+</menu>

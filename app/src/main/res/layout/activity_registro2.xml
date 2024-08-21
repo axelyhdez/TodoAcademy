@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Registro2">
-
+    <!--Segunda activity para registro de nuevo usuario-->
+    <!--Formulario para correo y contraseña -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

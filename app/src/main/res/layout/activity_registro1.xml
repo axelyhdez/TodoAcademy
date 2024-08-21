@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Registro1"
     android:orientation="vertical">
-
+    <!--Primer activity para registro de nuevo usuario-->
+    <!--Formulario para actualizar datos de contacto y escolares -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -47,6 +48,7 @@
                     android:fontFamily="@font/roboto"
                     />
 
+                <!--Datos de contact-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -111,8 +113,8 @@
                     android:layout_marginVertical="10sp"
                     android:textColor="@color/black"
                     />
+                <!--Datos escolares-->
                 <TextView
-                    android:id="@+id/etEscuela"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Datos escolares"
@@ -121,6 +123,7 @@
                     android:layout_marginTop="15sp"
                     android:textStyle="bold"/>
                 <EditText
+                    android:id="@+id/etEscuela"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Colegio o Institucion"
@@ -145,17 +148,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <Button
+                        android:id="@+id/btnFechaInicio"
                         style="@style/Widget.App.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Inicio"
                         android:layout_gravity="center"
-                        android:textSize="18sp"
+                        android:layout_marginHorizontal="5sp"
                         android:layout_weight="1"
-                        app:icon="@drawable/calendar"
-                        android:layout_marginHorizontal="5sp"/>
+                        android:text="Inicio"
+                        android:textSize="18sp"
+                        app:icon="@drawable/calendar" />
+
                     <Button
+                        android:id="@+id/btnFechaFin"
                         style="@style/Widget.App.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

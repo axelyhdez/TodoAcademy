@@ -3,9 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Home"
     android:orientation="vertical">
-
+    <!--Fragment Home-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +21,7 @@
         android:text="Inicio"
         android:layout_marginTop="20sp"
         android:fontFamily="@font/roboto"
-        android:textSize="25sp"/>
+        android:textSize="30sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,72 +30,554 @@
         android:gravity="center"
         android:layout_marginTop="20sp">
 
-        <EditText
-            android:background="@drawable/edit_text_border"
-            android:backgroundTint="#ced4da"
+        <com.google.android.material.card.MaterialCardView
+            style="?attr/materialCardViewElevatedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="buscar"
-            android:paddingHorizontal="110sp"
-            android:paddingVertical="10sp"/>
-        <Button
-            android:id="@+id/btn_send"
-            style="?attr/materialIconButtonFilledStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10sp"
-            android:text="Buscar"
-            android:layout_marginHorizontal="5sp"
-            android:layout_marginTop="10sp"
-            android:paddingHorizontal="15sp"
-            />
-    </LinearLayout>
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/blue4">
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mis Cursos"
-            android:fontFamily="@font/roboto"
+            android:gravity="center"
             android:textSize="16sp"
-            android:layout_marginLeft="20sp"
-            android:layout_marginTop="5sp"
-            android:layout_weight="1"/>
-        <Button
-            style="@style/Widget.Material3.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ver más"
-            android:textStyle="bold"
-            android:layout_margin="5sp" />
-    </LinearLayout>
+            android:padding="10sp"
+            android:layout_marginHorizontal="8sp"
+            android:textColor="@color/white"
+            android:text="Aquí podrás encontrar los cursos de capacitación para certificación que mejor se adaptan a tus necesidades."
+        />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/flutter"
-        android:layout_gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Todos los cursos"
+        android:text="Todas las categorias"
         android:fontFamily="@font/roboto"
-        android:textSize="16sp"
+        android:textSize="25sp"
         android:layout_marginLeft="20sp"
-        android:layout_marginTop="5sp"/>
+        android:layout_marginTop="15sp"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <!--Cursos-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/cursos"
-        android:layout_gravity="center"
-        />
+        android:orientation="vertical"
+        android:gravity="center">
 
+        <!--Primer fila-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="10sp">
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="8sp"
+                app:cardBackgroundColor="@color/blue4">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
+                    <!-- Media -->
+                    <LinearLayout
+                        android:layout_width="180sp"
+                        android:layout_height="160sp"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+
+                        <ImageView
+                            android:id="@+id/foto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/borde"
+                            android:contentDescription="imagen media"
+                            app:srcCompat="@drawable/java" />
+                    </LinearLayout>
+
+                    <!-- Title-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Programador en Java"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto"/>
+                    </LinearLayout>
+
+                    <!-- Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/java"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ver más"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="8sp"
+                app:cardBackgroundColor="@color/blue4">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <LinearLayout
+                        android:layout_width="180sp"
+                        android:layout_height="160sp"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="imagen media"
+                            app:srcCompat="@drawable/oracle"
+                            android:background="@drawable/borde"
+                            />
+                    </LinearLayout>
+
+                    <!-- Title-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Base de datos Oracle"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto"/>
+                    </LinearLayout>
+
+                    <!-- Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/oracle"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ver más"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!--Segunda fila-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10sp">
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8sp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/blue4">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <LinearLayout
+                        android:layout_width="180sp"
+                        android:layout_height="160sp"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="imagen media"
+                            app:srcCompat="@drawable/base_datos"
+                            android:background="@drawable/borde"
+                            />
+                    </LinearLayout>
+
+                    <!-- Title-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Base de Datos"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <!-- Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/basedatos"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Ver más"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/blue4">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <LinearLayout
+                        android:layout_width="180sp"
+                        android:layout_height="160sp"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="imagen media"
+                            app:srcCompat="@drawable/office"
+                            android:background="@drawable/borde"
+                            />
+                    </LinearLayout>
+
+                    <!-- Title-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ofimática Microsoft"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <!-- Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/ofimatica"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Proximamente..."
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!--Tercera fila-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10sp">
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8sp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/blue4">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <LinearLayout
+                        android:layout_width="180sp"
+                        android:layout_height="160sp"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="imagen media"
+                            app:srcCompat="@drawable/apps_moviles"
+                            android:background="@drawable/borde"
+                            />
+                    </LinearLayout>
+
+                    <!-- Title-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Desarrollo de Aplicaciones Móviles"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <!-- Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/moviles"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Ver más"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/blue4">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <LinearLayout
+                        android:layout_width="180sp"
+                        android:layout_height="160sp"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="imagen media"
+                            app:srcCompat="@drawable/hello_world"
+                            android:background="@drawable/borde"
+                            android:backgroundTint="#272822"
+                            />
+                    </LinearLayout>
+
+                    <!-- Title-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Programador en Tecnologías Diversas"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <!-- Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/programador"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Ver más"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!--Cuarta fila-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8sp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/blue4">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <LinearLayout
+                        android:layout_width="180sp"
+                        android:layout_height="160sp"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="imagen media"
+                            app:srcCompat="@drawable/desarrollo_videojuegos"
+                            android:background="@drawable/borde"
+                            />
+                    </LinearLayout>
+
+                    <!-- Title-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Programación de Videojuegos"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <!-- Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/videojuegos"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Ver más"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/blue4">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <LinearLayout
+                        android:layout_width="180sp"
+                        android:layout_height="160sp"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="imagen media"
+                            app:srcCompat="@drawable/admin_proyectos"
+                            android:background="@drawable/borde"
+                            />
+                    </LinearLayout>
+
+                    <!-- Title-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Administración de Proyectos"
+                            android:textAppearance="?attr/textAppearanceTitleMedium"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <!-- Button -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/administracion"
+                            style="?attr/borderlessButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="Ver más"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="\n\n\n\n"/>
+            
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

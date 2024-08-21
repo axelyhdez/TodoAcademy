@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
+    <!--Activity del Chatbot-->
     <LinearLayout
         android:id="@+id/ll_layout_bar"
         android:layout_width="match_parent"
