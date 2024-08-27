@@ -16,5 +16,4 @@ La aplicación se conecta a una API REST desarrollada internamente para mostrar 
 ![Imagen1](https://github.com/user-attachments/assets/40a2e756-5c83-4b1a-a457-2de8343565d8)
 ![Imagen2](https://github.com/user-attachments/assets/a7e5686f-d374-4881-8b3f-4f393e688070)
 ![Imagen3](https://github.com/user-attachments/assets/e4712d71-df57-4dac-a2a8-60b7cb030e0a)
-
-
+![Imagen4](https://github.com/user-attachments/assets/71b4d79d-2fcc-4a5f-98c5-822bf98f252e)
